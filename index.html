@@ -12,14 +12,14 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
         crossorigin="anonymous" />
 
-    <!-- CSS link -->
-    <link rel="stylesheet" href="src/style.css" />
-
     <!-- Axios-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
      
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/ced384bf75.js" crossorigin="anonymous"></script>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
         <container>
@@ -31,7 +31,7 @@
                 <button id="location-button">
                     Current location
                 </button>
-        
+            
                 <h1>
                     <span id="city-name">
                         Warsaw
@@ -82,6 +82,10 @@
                 </span>
                 <hr />
             </section>
+            <video autoplay muted loop id="cloudsVideo">
+                <source src="src\img\timelapse-cloudy-sky.mp4">
+            </video>
+
             <section class="nextDays">
                 <div class="row">
                     <div class="col-2.4">
