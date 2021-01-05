@@ -16,12 +16,17 @@ video {
 
 section.overlay {
   position: absolute;
+  left: 40px;
+  right: 40px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 20px 20px;
   padding: 10px;
   margin-bottom: 20px;
 }
 
 input {
+  display: inline;
   background-image: url(img/search-solid.svg);
   background-position: 25px 10px;
   background-size: 20px;
@@ -38,8 +43,28 @@ input {
 }
 
 input:focus {
-  width: 100%;
+  width: 50%;
   border: 2px solid #555;
+}
+
+#location-button {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 1px 1px #bfbfbf;
+  margin: 8px auto;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+#location-button:hover {
+  border: 2px solid rgb(45, 37, 88);
+  background-color: rgba(127, 155, 156, 0.582);
+  cursor: pointer;
 }
 
 h1 {
@@ -82,8 +107,27 @@ div.grades {
   font-weight: 600;
 }
 
+button.gradeSymbol {
+  display: inline;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 1px 1px #bfbfbf;
+  margin: 8px auto;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+
+button.gradeSymbol:hover {
+  border: 2px solid rgb(45, 37, 88);
+  background-color: rgba(127, 155, 156, 0.582);
+  cursor: pointer;
+}
+
 div .sunClouds {
-  width: 90%;
+  width: 80%;
   display: block;
   margin: 0 auto;
   padding: 0;

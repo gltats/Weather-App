@@ -71,7 +71,7 @@ function showRealTemperature(response) {
   let temperatureHTML = document.querySelector("#today-temperature");
   let cityName = response.data.name;
   city.innerHTML = `${cityName}`;
-  temperatureHTML.innerHTML = `${temperature}`;
+  temperatureHTML.innerHTML = `${temperature} º`;
 }
 
 function showPosition(position) {
