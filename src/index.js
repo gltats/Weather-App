@@ -33,6 +33,23 @@ let date = document.querySelector("#date");
 
 date.innerHTML = `<strong> ${day} </strong> <br /> ${month}, ${dates} <br />Partly cloudy <br />`;
 
+// for updated 
+function formatDate() {
+  let date = new Date();
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `Updated at: ${hours}:${minutes}`;
+}
+let timeUpdate = document.querySelector("#updated")
+timeUpdate .innerHTML = formatDate();
+
 // search city and show temperature
 function displayWeatherCondition(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
@@ -43,8 +60,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-    document.querySelector("#weatherDescription").innerHTML =
-    response.data.weather[0].main;
+  document.querySelector("#weather-description").innerHTML = response.data.weather[0].main;
 }
 
 function searchCity(city) {
