@@ -31,7 +31,7 @@ let month = months[currentTime.getMonth()];
 
 let date = document.querySelector("#date");
 
-date.innerHTML = `<strong> ${day} </strong> <br /> ${month}, ${dates} <br />Partly cloudy <br />`;
+date.innerHTML = `<strong> ${day} </strong> <br /> ${month}, ${dates}`;
 
 // for updated 
 function formatDate() {
@@ -60,7 +60,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#weather-description").innerHTML = response.data.weather[0].main;
+  document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
 }
 
 function searchCity(city) {

@@ -147,6 +147,9 @@ div.todayInfo {
   font-size: 20px;
   font-weight: 600;
 }
+div.weatherDescription:first-letter {
+  text-transform: capitalize;
+}
 
 strong.today {
   font-size: 25px;
