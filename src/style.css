@@ -105,28 +105,25 @@ div.col-4 {
 
 div.grades {
   position: relative;
-  top: 30%;
   font-size: 20px;
+  top: 30%;
   font-weight: 600;
 }
 
-button.gradeSymbol {
-  display: inline;
+.grades .units {
+  position: relative;
   font-size: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 1px 1px #bfbfbf;
-  margin: 8px auto;
-  font-size: 16px;
-  line-height: 22px;
-  padding: 10px 15px;
-  text-decoration: none;
-  transition: all 200ms ease;
+  top: -20px;
 }
 
-button.gradeSymbol:hover {
-  border: 2px solid rgb(45, 37, 88);
-  background-color: rgba(127, 155, 156, 0.582);
-  cursor: pointer;
+.grades .active {
+  color: rgb(33, 33, 33);
+  font-weight: bolder;
+  cursor: default;
+}
+
+.grades.active:hover {
+  text-decoration: none;
 }
 
 div .sunClouds {

@@ -61,6 +61,7 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -75,11 +76,6 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-
-searchCity("Warsaw");
-
 //Get geolocation
 function showRealTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -87,7 +83,7 @@ function showRealTemperature(response) {
   let temperatureHTML = document.querySelector("#today-temperature");
   let cityName = response.data.name;
   city.innerHTML = `${cityName}`;
-  temperatureHTML.innerHTML = `${temperature} º`;
+  temperatureHTML.innerHTML = `${temperature}`;
 }
 
 function showPosition(position) {
@@ -103,32 +99,40 @@ function currentPosition(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+
+
+// temperature conversion
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#today-temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#today-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", currentPosition);
 
-// temperature conversion
-function convertToFahrenheit(event) {
-  event.preventDefault();
+searchCity("Warsaw");
 
-  let temperatureElement = document.querySelector("#today-temperature");
-  temperatureElement.innerHTML = `46.4 ºF`;
-
-  let temperatureElement2 = document.querySelector("#today-temperature2");
-  temperatureElement2.innerHTML = `51º/39º`;
-}
-
-function convertToCelcius(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector("#today-temperature");
-  temperatureElement.innerHTML = `8 ºC`;
-
-  let temperatureElement2 = document.querySelector("#today-temperature2");
-  temperatureElement2.innerHTML = `11º/4º`;
-}
-
-let fahrenheitLink = document.querySelector("#gradesFarenheit");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celciusLink = document.querySelector("#gradesCelsius");
-celciusLink.addEventListener("click", convertToCelcius);
