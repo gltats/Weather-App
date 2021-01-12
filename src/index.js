@@ -82,7 +82,7 @@ function displayWeatherForecast(response){
   for (let index = 0; index < 6; index++) {
   forecast = response.data.list[index];
   forecastElement.innerHTML += `
-    <div class="rowB">
+  <div class="rowB">
       <div class="col-2">
         <div class="card1">
           <div class="card-body">

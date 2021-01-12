@@ -164,6 +164,17 @@ strong.today {
   text-decoration: underline;
 }
 
+h2 {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  margin: 0 auto;
+}
+
 section.nextDays {
   background: rgba(255, 255, 255, 0.199);
   border-radius: 20px 20px;
@@ -187,16 +198,6 @@ section.nextDays {
   padding: 10px;
   transition: all 200ms ease-in-out;
   cursor: initial;
-}
-
-.card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover,
-.card5:hover {
-  display: inline-block;
-  border: 2px solid rgb(45, 37, 88);
-  background-color: rgba(127, 155, 156, 0.582);
 }
 
 h3 {
