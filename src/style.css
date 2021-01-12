@@ -2,9 +2,10 @@ body {
   padding: 50px 40px;
   background: linear-gradient(
     to bottom right,
-    rgb(71, 169, 226),
-    rgb(184, 207, 255)
+    rgb(36, 43, 109),
+    rgb(70, 56, 255)
   );
+  cursor: initial;
 }
 
 video {
@@ -44,10 +45,16 @@ input {
   cursor: pointer;
 }
 
+input:hover {
+  width: 50%;
+  background-color: rgba(127, 155, 156, 0.582);
+  border: 2px solid rgb(45, 37, 88);
+}
 input:focus {
+  outline: none;
   width: 50%;
   color: white;
-  border: 2px solid rgb(45, 37, 88);
+  border: 2.5px solid rgb(45, 37, 88);
 }
 
 #location-button {
@@ -70,6 +77,7 @@ input:focus {
   border: 2px solid rgb(45, 37, 88);
   background-color: rgba(127, 155, 156, 0.582);
   cursor: pointer;
+  outline: none;
 }
 
 h1 {
@@ -122,6 +130,7 @@ div.grades {
   color: rgb(33, 33, 33);
   font-weight: bolder;
   cursor: default;
+  text-decoration: none;
 }
 
 .grades.active:hover {
@@ -168,6 +177,7 @@ section.nextDays {
 .card3,
 .card4,
 .card5 {
+  display: inline-block;
   width: 150px;
   margin: 10px;
   color: black;
@@ -176,7 +186,7 @@ section.nextDays {
   border-radius: 25px 25px;
   padding: 10px;
   transition: all 200ms ease-in-out;
-  cursor: pointer;
+  cursor: initial;
 }
 
 .card1:hover,
@@ -184,6 +194,7 @@ section.nextDays {
 .card3:hover,
 .card4:hover,
 .card5:hover {
+  display: inline-block;
   border: 2px solid rgb(45, 37, 88);
   background-color: rgba(127, 155, 156, 0.582);
 }

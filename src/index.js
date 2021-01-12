@@ -32,8 +32,6 @@ let month = months[currentTime.getMonth()];
 return `<strong> ${day} </strong> <br /> ${month}, ${dates}`;
 }
 
-let date = document.querySelector("#date");
-date.innerHTML = formatDate();
 
 // for updated 
 function formatHours(timestamp) {
@@ -84,7 +82,7 @@ function displayWeatherForecast(response){
   for (let index = 0; index < 6; index++) {
   forecast = response.data.list[index];
   forecastElement.innerHTML += `
-    <div class="row">
+    <div class="rowB">
       <div class="col-2">
         <div class="card1">
           <div class="card-body">
@@ -162,6 +160,26 @@ function displayCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#today-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+//change video Day/ Night
+let dayTime = new Date();
+  let hour = dayTime.getHours();
+
+  if (hour < 6 || hour > 19) {
+    let video = document.querySelector("#video");
+    let bodyBackground = document.querySelector("body")
+    video.innerHTML = "url('src/day.mp4')";
+    bodyBackground.style.background = "linear-gradient( to bottom right, rgb(71, 169, 226), rgb(184, 207, 255)";
+  } else {
+    let video = document.querySelector("#video");
+    let bodyBackground = document.querySelector("body")
+    bodyBackground.style.background = "linear-gradient( to bottom right,  rgb(36, 43, 109), rgb(70, 56, 255)";
+    video.innerHTML = "url('src/night.mp4')";
+  }
+
+
+let date = document.querySelector("#date");
+date.innerHTML = formatDate();
 
 let celsiusTemperature = null;
 
