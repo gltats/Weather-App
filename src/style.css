@@ -47,7 +47,7 @@ input {
 input:focus {
   width: 50%;
   color: white;
-  border: 2px solid #555;
+  border: 2px solid rgb(45, 37, 88);
 }
 
 #location-button {
@@ -56,6 +56,8 @@ input:focus {
   right: 50px;
   font-size: 20px;
   border-radius: 10px;
+  background-color: rgb(255, 248, 248);
+  border: 1px solid #27ade2;
   box-shadow: 2px 1px 1px #bfbfbf;
   margin: 8px auto;
   font-size: 16px;
@@ -158,6 +160,7 @@ section.nextDays {
   border-radius: 20px 20px;
   padding: 20px 200px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .card1,
@@ -165,10 +168,10 @@ section.nextDays {
 .card3,
 .card4,
 .card5 {
-  width: 200px;
+  width: 150px;
   margin: 10px;
   color: black;
-  background-color: rgba(255, 255, 255, 0.801);
+  background-color: rgba(116, 139, 214, 0.801);
   border: 1px solid black;
   border-radius: 25px 25px;
   padding: 10px;
@@ -185,51 +188,11 @@ section.nextDays {
   background-color: rgba(127, 155, 156, 0.582);
 }
 
-img.sunCloudsNextDays {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  width: 40%;
-}
-img.cloud {
-  display: block;
-  margin: 10px auto 0px auto;
-  padding: 0;
-  width: 35%;
-}
-img.rain {
-  display: block;
-  margin: 10px auto 0px auto;
-  padding: 0;
-  width: 35%;
-}
-
-button {
-  border-radius: 15px;
-  box-shadow: 4px 4px 2px #bfbfbf;
-  margin: 20px auto;
-  display: block;
-  background-color: rgb(255, 248, 248);
-  border: 1px solid #27ade2;
-  color: #27ade2;
-  font-size: 16px;
-  line-height: 22px;
-  padding: 10px 20px;
-  text-decoration: none;
-  transition: all 200ms ease;
-}
-
-button:hover {
-  color: white;
-  background: #27ade2;
-  cursor: pointer;
-}
-
 h3 {
   display: block;
   font-family: monospace;
   font-size: 16px;
   font-weight: normal;
   color: gray;
-  text-align: center;
+  text-align: right;
 }
