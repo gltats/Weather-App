@@ -190,7 +190,7 @@ section.nextDays {
 .card3,
 .card4,
 .card5 {
-  display: inline-block;
+  display: inline;
   width: 150px;
   margin: 10px;
   color: black;
