@@ -73,7 +73,7 @@ function displayWeatherCondition(response) {
 
 }
 
-//Forecast
+//Forecast Hourly
 function displayWeatherForecast(response){
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -101,6 +101,7 @@ function displayWeatherForecast(response){
     `;
   }
 }
+
 
 function searchCity(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
@@ -162,22 +163,23 @@ function displayCelsiusTemperature(event) {
 }
 
 //change video Day/ Night
-let dayTime = new Date();
-  let hour = dayTime.getHours();
+var hour = new Date().getHours();
+
+
 
   if (hour < 6 || hour > 19) {
-    let video = document.querySelector("#video");
-    let bodyBackground = document.querySelector("body")
+    let video = document.querySelector("video");
+    let bodyBackground = document.querySelector("body");
     video.innerHTML = "url('src/day.mp4')";
-    bodyBackground.style.background = "linear-gradient( to bottom right, rgb(71, 169, 226), rgb(184, 207, 255)";
+    bodyBackground.style.background = ('blue');
   } else {
-    let video = document.querySelector("#video");
-    let bodyBackground = document.querySelector("body")
-    bodyBackground.style.background = "linear-gradient( to bottom right,  rgb(36, 43, 109), rgb(70, 56, 255)";
+    let video = document.querySelector("video");
+    let bodyBackground = document.querySelector("body");
+    bodyBackground.style.background = ('violet');
     video.innerHTML = "url('src/night.mp4')";
   }
 
-
+  
 let date = document.querySelector("#date");
 date.innerHTML = formatDate();
 

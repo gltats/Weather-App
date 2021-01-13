@@ -78,7 +78,7 @@
                 </section>
             </section>
             <section>
-                <span class="update">
+                <span class="update" >
                     <strong id="updated"> Updated at: 23:44</strong>
                 </span>
                 <hr />
@@ -86,12 +86,10 @@
             <video autoplay muted loop id="video">
                 <source src="src\img\day.mp4">
             </video>
-            <h2> Next Hours: </h2>
-            <section class="nextDays" id="forecast">
- 
-                <button>
-                    Next Hours
-                </button>
+            <h2 id="change-color"> Next Hours: <small>(following your current Time Zone)</small> </h2>
+            <section class="nextDays">
+                <div id="forecast"></div>
+               
             </section>
             <h3>
                 <a href="https://github.com/gltats/Weather-App.git">
@@ -99,6 +97,7 @@
                 </a>
                     by Tatiana Gomes
             </h3>
+
                 
         </container>
 <script src="src/index.js"></script>

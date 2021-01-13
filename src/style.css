@@ -2,8 +2,8 @@ body {
   padding: 50px 40px;
   background: linear-gradient(
     to bottom right,
-    rgb(36, 43, 109),
-    rgb(70, 56, 255)
+    rgb(71, 169, 226),
+    rgb(184, 207, 255)
   );
   cursor: initial;
 }
@@ -198,6 +198,29 @@ section.nextDays {
   padding: 10px;
   transition: all 200ms ease-in-out;
   cursor: initial;
+}
+
+button.nextDaysButton {
+  border-radius: 15px;
+  box-shadow: 4px 4px 2px #bfbfbf;
+  margin: 20px auto;
+  display: block;
+  background-color: rgb(255, 248, 248);
+  border: 1px solid #27ade2;
+  color: #27ade2;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 200ms ease;
+  outline: none;
+}
+
+button.nextDaysButton:hover {
+  color: white;
+  background: #27ade2;
+  cursor: pointer;
+  outline: none;
 }
 
 h3 {
