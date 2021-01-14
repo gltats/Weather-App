@@ -82,23 +82,21 @@ function displayWeatherForecast(response){
   for (let index = 0; index < 6; index++) {
   forecast = response.data.list[index];
   forecastElement.innerHTML += `
-  <div class="rowB">
-      <div class="col-2">
-        <div class="card1">
-          <div class="card-body">
-            <h5 class="card-title">${formatHours(forecast.dt * 1000)}
-            </h5>
-            <p>
-              <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-                <br />
-                  ${Math.round(forecast.main.temp_max)}º /  ${Math.round(forecast.main.temp_min)}º <br />
-                  ${forecast.main.humidity}% 💧 <br />
-            </p>
+        <div class="col-2">
+          <div class="card1">
+            <div class="card-body">
+              <h5 class="card-title">${formatHours(forecast.dt * 1000)}
+              </h5>
+              <p>
+                <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+                  <br />
+                    ${Math.round(forecast.main.temp_max)}º /  ${Math.round(forecast.main.temp_min)}º <br />
+                    ${forecast.main.humidity}% 💧 <br />
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    `;
+      `;
   }
 }
 
@@ -168,15 +166,16 @@ var hour = new Date().getHours();
 
 
   if (hour < 6 || hour > 19) {
-    let video = document.querySelector("video");
+    let videoSrc = document.querySelector("#videoSrc");
+    videoSrc.setAttribute("src", "src/img/day.mp4");
     let bodyBackground = document.querySelector("body");
-    video.innerHTML = "url('src/day.mp4')";
-    bodyBackground.style.background = ('blue');
+    bodyBackground.style.background = ('yellow');
   } else {
-    let video = document.querySelector("video");
+    let videoSrc = document.querySelector("#videoSrc");
+    videoSrc.setAttribute("src", "src/img/night.mp4");
     let bodyBackground = document.querySelector("body");
     bodyBackground.style.background = ('violet');
-    video.innerHTML = "url('src/night.mp4')";
+    
   }
 
   

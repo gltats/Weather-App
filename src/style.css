@@ -2,8 +2,8 @@ body {
   padding: 50px 40px;
   background: linear-gradient(
     to bottom right,
-    rgb(71, 169, 226),
-    rgb(184, 207, 255)
+    rgb(233, 242, 247),
+    rgb(167, 171, 179)
   );
   cursor: initial;
 }
