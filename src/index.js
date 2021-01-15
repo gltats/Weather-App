@@ -88,7 +88,7 @@ function displayWeatherForecast(response){
               <h5 class="card-title">${formatHours(forecast.dt * 1000)}
               </h5>
               <p>
-                <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+                <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" class="iconWeather"/>
                   <br />
                     ${Math.round(forecast.main.temp_max)}º /  ${Math.round(forecast.main.temp_min)}º <br />
                     ${forecast.main.humidity}% 💧 <br />
@@ -161,21 +161,20 @@ function displayCelsiusTemperature(event) {
 }
 
 //change video Day/ Night
-var hour = new Date().getHours();
+var n = new Date().getHours();
 
-
-
-  if (hour < 6 || hour > 19) {
-    let videoSrc = document.querySelector("#videoSrc");
-    videoSrc.setAttribute("src", "src/img/day.mp4");
-    let bodyBackground = document.querySelector("body");
-    bodyBackground.style.background = ('yellow');
-  } else {
+  if (n > 15|| n < 6 ) {
     let videoSrc = document.querySelector("#videoSrc");
     videoSrc.setAttribute("src", "src/img/night.mp4");
-    let bodyBackground = document.querySelector("body");
-    bodyBackground.style.background = ('violet');
+    let bodyColor = document.querySelector("body");
+    bodyColor.className = "night";
     
+    
+  } else {
+    let videoSrc = document.querySelector("#videoSrc");
+    videoSrc.setAttribute("src", "src/img/day.mp4");
+    let bodyColor = document.querySelector("body");
+    bodyColor.className = "day";
   }
 
   

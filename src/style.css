@@ -1,26 +1,38 @@
 body {
   padding: 50px 40px;
-  background: linear-gradient(
-    to bottom right,
-    rgb(233, 242, 247),
-    rgb(167, 171, 179)
-  );
   cursor: initial;
 }
 
+.day {
+  background: linear-gradient(
+    to bottom right,
+    rgb(71, 169, 226),
+    rgb(184, 207, 255)
+  );
+}
+
+.night {
+  background: linear-gradient(
+    to bottom right,
+    rgb(80, 42, 250),
+    rgb(144, 45, 201)
+  );
+}
+
 video {
+  margin-left: 30px;
+  margin-right: auto;
   z-index: -1;
   position: relative;
   width: 100%;
   border-radius: 20px 20px;
-  opacity: 0.6;
 }
 
 section.overlay {
   position: absolute;
   left: 40px;
   right: 40px;
-  margin-left: auto;
+  margin-left: 30px;
   margin-right: auto;
   border-radius: 20px 20px;
   padding: 10px;
@@ -178,9 +190,10 @@ h2 {
 }
 
 section.nextDays {
+  margin-left: 30px;
   background: rgba(255, 255, 255, 0.199);
   border-radius: 20px 20px;
-  padding: 20px 200px;
+  padding: 30px 40px;
   margin-bottom: 20px;
   position: relative;
 }
@@ -190,39 +203,13 @@ section.nextDays {
 .card3,
 .card4,
 .card5 {
-  display: inline-block;
-  width: 150px;
-  margin: 10px;
+  width: 125px;
   color: black;
   background-color: rgba(116, 139, 214, 0.801);
   border: 1px solid black;
   border-radius: 25px 25px;
-  padding: 10px;
   transition: all 200ms ease-in-out;
   cursor: initial;
-}
-
-button.nextDaysButton {
-  border-radius: 15px;
-  box-shadow: 4px 4px 2px #bfbfbf;
-  margin: 20px auto;
-  display: block;
-  background-color: rgb(255, 248, 248);
-  border: 1px solid #27ade2;
-  color: #27ade2;
-  font-size: 16px;
-  line-height: 22px;
-  padding: 10px 20px;
-  text-decoration: none;
-  transition: all 200ms ease;
-  outline: none;
-}
-
-button.nextDaysButton:hover {
-  color: white;
-  background: #27ade2;
-  cursor: pointer;
-  outline: none;
 }
 
 h3 {
