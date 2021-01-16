@@ -163,19 +163,17 @@ function displayCelsiusTemperature(event) {
 //change video Day/ Night
 var n = new Date().getHours();
 
-  if (n > 15|| n < 6 ) {
-    let videoSrc = document.querySelector("#videoSrc");
-    videoSrc.setAttribute("src", "src/img/night.mp4");
-    let bodyColor = document.querySelector("body");
-    bodyColor.className = "night";
-    
-    
-  } else {
-    let videoSrc = document.querySelector("#videoSrc");
-    videoSrc.setAttribute("src", "src/img/day.mp4");
-    let bodyColor = document.querySelector("body");
-    bodyColor.className = "day";
-  }
+let video = document.querySelector("#video");
+let videoSrc = document.querySelector("#videoSrc");
+let bodyColor = document.querySelector("body");
+if (n > 19 || n < 6) {
+  videoSrc.setAttribute("src", "src/img/night.mp4");
+  bodyColor.className = "night";
+} else {
+  videoSrc.setAttribute("src", "src/img/day.mp4");
+  bodyColor.className = "day";
+}
+video.load();
 
   
 let date = document.querySelector("#date");
