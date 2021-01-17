@@ -1,6 +1,7 @@
 body {
   padding: 50px 40px;
   cursor: initial;
+  color: black;
 }
 
 .day {
@@ -9,6 +10,7 @@ body {
     rgb(71, 169, 226),
     rgb(184, 207, 255)
   );
+  color: black;
 }
 
 .night {
@@ -17,6 +19,7 @@ body {
     rgb(80, 42, 250),
     rgb(144, 45, 201)
   );
+  color: plum;
 }
 
 video {
@@ -24,8 +27,10 @@ video {
   margin-right: auto;
   z-index: -1;
   position: relative;
+  right: 20px;
   width: 100%;
   border-radius: 20px 20px;
+  opacity: 0.85;
 }
 
 section.overlay {
@@ -147,6 +152,13 @@ div.grades {
   text-decoration: none;
 }
 
+.grades .active .pinkLink {
+  color: rgb(33, 33, 33);
+  font-weight: bolder;
+  cursor: default;
+  text-decoration: none;
+}
+
 .grades.active:hover {
   text-decoration: none;
 }
@@ -193,9 +205,13 @@ section.nextDays {
   margin-left: 30px;
   background: rgba(255, 255, 255, 0.199);
   border-radius: 20px 20px;
-  padding: 30px 40px;
+  padding: 10px 10px;
   margin-bottom: 20px;
   position: relative;
+}
+
+#forecast {
+  margin-left: 80px;
 }
 
 .card1,
@@ -219,4 +235,229 @@ h3 {
   font-weight: normal;
   color: gray;
   text-align: right;
+}
+
+/* For tablet */
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 40px 15px;
+    font-size: 14px;
+  }
+
+  section.overlay {
+    left: 30px;
+    right: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  video {
+    right: 0px;
+    margin-left: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  input {
+    background-position: 25px 9px;
+    background-size: 15px;
+    margin: 50px 0 10px 10px;
+    padding: 5px;
+  }
+
+  #location-button {
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    margin: 0;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  h1 {
+    margin: 2px 0 2px 5px;
+    padding: 5px;
+  }
+
+  div.grades {
+    font-size: 19px;
+    top: 0px;
+  }
+
+  strong.todayTemperature {
+    font-size: 30px;
+  }
+
+  .grades .units {
+    top: -10px;
+  }
+
+  row {
+    margin-right: -5px;
+    margin-left: -5px;
+    margin-top: 10px;
+  }
+
+  div.col-4 {
+    padding-right: 5px;
+  }
+
+  div.todayInfo {
+    position: relative;
+    top: 0%;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  section.nextDays {
+    margin-left: 10px;
+    padding: 10px 10px;
+  }
+
+  #columnsForecast {
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 10px;
+  }
+
+  .card-body {
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .forecastP {
+    margin: 0%;
+  }
+
+  .card-title {
+    margin: 0%;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+
+  #forecast {
+    margin-left: 30px;
+  }
+}
+
+/* For phone */
+@media only screen and (max-width: 400px) {
+  body {
+    padding: 40px 15px;
+    font-size: 14px;
+  }
+
+  section.overlay {
+    left: 20px;
+    right: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  video {
+    margin-left: 10px;
+  }
+
+  input {
+    background-position: 25px 9px;
+    background-size: 15px;
+    margin: 40px 0 10px 10px;
+    padding: 5px;
+    font-size: small;
+    line-height: normal;
+  }
+
+  #location-button {
+    top: 45px;
+    right: -5px;
+    margin: 1px;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  h1 {
+    margin: 2px 0 2px 20px;
+    padding: 5px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  div.grades {
+    font-size: 12px;
+    top: 5px;
+    padding-left: 10px;
+  }
+
+  .grades .units {
+    top: -5px;
+    font-size: 10px;
+  }
+
+  strong.todayTemperature {
+    font-size: 14px;
+  }
+
+  row {
+    margin-right: -5px;
+    margin-left: 20px;
+  }
+
+  div.todayInfo {
+    position: relative;
+    top: 0%;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  section.nextDays {
+    margin-left: 10px;
+    padding: 10px 10px;
+  }
+
+  #columnsForecast {
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 10px;
+  }
+
+  .card-body {
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .forecastP {
+    margin: 0%;
+  }
+
+  .card-title {
+    margin: 0%;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  #forecast {
+    margin-left: 0px;
+  }
 }
