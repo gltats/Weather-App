@@ -122,8 +122,10 @@ function showRealTemperature(response) {
   let city = document.querySelector("#city-name");
   let temperatureHTML = document.querySelector("#today-temperature");
   let cityName = response.data.name;
+  let hoursForecast = document.querySelector("card-title")
   city.innerHTML = `${cityName}`;
   temperatureHTML.innerHTML = `${temperature}`;
+  hoursForecast.innerHTML = `${formatHours(forecast.dt * 1000)}`;
 }
 
 function showPosition(position) {
