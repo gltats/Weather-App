@@ -125,7 +125,7 @@ function showRealTemperature(response) {
   let hoursForecast = document.querySelector("card-title")
   city.innerHTML = `${cityName}`;
   temperatureHTML.innerHTML = `${temperature}`;
-  hoursForecast.innerHTML = `${formatHours(forecast.dt * 1000)}`;
+  hoursForecast.innerHTML = formatHours(forecast.dt * 1000);
 }
 
 function showPosition(position) {
@@ -133,7 +133,9 @@ function showPosition(position) {
   let lon = position.coords.longitude;
   let apiKey = "65bd5d27fb5bb2b47af1afd93925a308";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(apiUrl).then(showRealTemperature);
+  axios.get(apiUrl).then(displayWeatherCondition);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherForecast);
 }
 
 function currentPosition(event) {
